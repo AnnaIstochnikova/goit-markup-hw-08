@@ -11,7 +11,11 @@ footer {
   & > div {
     padding-top: 60px;
   }
-
+  @media screen and (min-width: $bp-tablet) and (max-width: $bp-laptop) {
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
   @media screen and (min-width: $bp-laptop) {
     justify-content: space-between;
     flex-direction: row;
@@ -55,6 +59,10 @@ footer {
 .form {
   display: flex;
   flex-direction: column;
+  @media screen and (max-width: $bp-laptop) {
+    width: 60%;
+    align-items: center;
+  }
 }
 
 .icon-footer-newsletter {
@@ -78,6 +86,10 @@ footer {
   width: 358px;
   padding: 15px;
   margin-bottom: 20px;
+  display: block;
+  @media screen and (min-width: $bp-laptop) {
+    display: inline-block;
+  }
 
   &:focus-within {
     border: solid 1px getColor(brand-color);
