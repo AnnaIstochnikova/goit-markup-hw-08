@@ -1,0 +1,77 @@
+footer {
+  background-color: #2f303a;
+}
+
+.container__footer {
+  display: flex;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  justify-content: space-between;
+}
+
+.address {
+  text-decoration: none;
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+.footer__contact--address {
+  color: getColor('white');
+}
+
+.footer__contact--link {
+  color: #ffffff60;
+  &:hover,
+  &:focus {
+    color: getColor(brand-color);
+    transition: color $transition;
+  }
+}
+
+.footer__icon {
+  width: 44px;
+  height: 44px;
+  background-color: rgba(255, 255, 255, 0.1);
+  margin-top: 9px;
+  display: inline-block;
+  &:hover,
+  &:focus {
+    background-color: getColor(brand-color);
+    transition: background-color $transition;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.icon-footer-newsletter {
+  position: relative;
+  display: inline-block;
+  fill: getColor('white');
+  width: 24px;
+  height: 24px;
+  left: 18px;
+  top: 4px;
+}
+.footer__input {
+  background-color: getColor(background-color);
+  border-radius: $border-radius-normal;
+  border: rgba(255, 255, 255, 0.3) solid 1px;
+  bottom: 4px;
+  color: rgba(255, 255, 255, 0.6);
+  height: 50px;
+  margin-right: 12px;
+  outline: none;
+  width: 358px;
+  padding: 15px;
+
+  &:focus-within {
+    border: solid 1px getColor(brand-color);
+    transition: color $transition;
+  }
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+  }
+}

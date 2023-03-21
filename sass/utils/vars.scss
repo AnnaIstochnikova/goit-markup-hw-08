@@ -1,0 +1,32 @@
+$colors: (
+  'main-color': #212121,
+  'secondary-color': #757575,
+  'brand-color': #2196f3,
+  'white': #fff,
+  'black': #000,
+  'icon-grey': #757575,
+  'background-color': #2f303a,
+  'background-light-gray': #f5f4fa,
+);
+@function getColor($key) {
+  @return map-get($colors, $key);
+}
+
+$border-radius-normal: 4px;
+
+$transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+$font-main: 'Roboto';
+$font-bold: 700;
+
+$font-size: (
+  'xs': 12px,
+  's': 14px,
+  'm': 18px,
+  'l': 20px,
+  'container__title': 36px,
+  'logo': 26px,
+);
+@function getFont($key) {
+  @return map-get($font-size, $key);
+}

@@ -1,0 +1,127 @@
+h1 {
+  color: getColor('white');
+  font-size: 44px;
+  font-weight: 900;
+  letter-spacing: 3px;
+  line-height: 1.3;
+  margin: 0;
+  padding-bottom: 30px;
+  padding-top: 200px;
+  text-align: center;
+}
+
+.box__background-photo--big {
+  background-image: linear-gradient(to left, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url('../images/10.jpg');
+  height: 600px;
+  text-align: center;
+}
+
+.background--light-gray {
+  background: getColor(background-light-gray);
+  padding-bottom: 1px;
+}
+
+.title {
+  font-size: getFont(s);
+  font-weight: 700;
+  line-height: 1.1;
+  text-transform: uppercase;
+
+  &--white {
+    color: getColor('white');
+    margin: 0 0 20px 0;
+  }
+  &--padding-top {
+    padding-top: 94px;
+  }
+}
+
+.container__title {
+  font-size: getFont(container__title);
+  font-weight: 700;
+  line-height: 1;
+  margin: 0;
+  padding-bottom: 50px;
+  text-align: center;
+}
+
+.list__icons--big {
+  flex-basis: calc((1170px - 90px) / 4);
+  gap: 30px;
+}
+
+.icon--big {
+  width: 270px;
+  height: 120px;
+  background-color: getColor(background-light-gray);
+}
+
+.icon-description {
+  color: getColor(secondary-color);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.icon-company {
+  border-radius: $border-radius-normal;
+  border: 1px solid #afb1b8;
+  fill: #afb1b8;
+  height: 92px;
+  width: 170px;
+
+  &:hover,
+  &:focus {
+    border: 1px solid getColor(brand-color);
+    fill: getColor(brand-color);
+    transition: fill $transition;
+  }
+}
+
+.photo-sticker--gray {
+  background-color: rgba(47, 48, 58, 0.8);
+  color: getColor('white');
+  font-size: getFont(s);
+  font-weight: 700;
+  height: 70px;
+  margin-top: 224px;
+  padding-top: 27px;
+  position: absolute;
+  text-align: center;
+  text-transform: uppercase;
+  width: 370px;
+}
+
+.icon--white-background:hover,
+.icon--white-background:focus {
+  background-color: getColor(brand-color);
+  fill: getColor('white');
+  transition: background-color $transition, fill $transition;
+}
+.photo-card {
+  background-color: getColor('white');
+  border-radius: $border-radius-normal;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 4px 4px 0px;
+  text-align: center;
+  margin: 0;
+
+  &__icons {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 16px;
+    width: 206px;
+  }
+  &__description {
+    color: getColor(secondary-color);
+    display: inline-block;
+    line-height: 1.1;
+    padding: 10px;
+  }
+  & > img {
+    border-top-right-radius: $border-radius-normal;
+    border-top-left-radius: $border-radius-normal;
+  }
+  & > figcaption {
+    padding: 30px 30px 18px 30px;
+  }
+}

@@ -1,0 +1,46 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  color: getColor(main-color);
+  width: 1600px;
+}
+svg {
+  transform-origin: center;
+}
+a,
+address {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+.container {
+  margin: 94px auto;
+  width: 1170px;
+
+  & > ul {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 0;
+  }
+}
+.button {
+  background: getColor('brand-color');
+  border-radius: $border-radius-normal;
+  border: none;
+  color: getColor('white');
+  font-weight: $font-bold;
+  height: 50px;
+  line-height: 30px;
+  position: relative;
+  width: 200px;
+  margin: 0 auto;
+  box-shadow: 0px 4px 4px 0px rgba(47, 48, 58, 0.25);
+  display: inline-block;
+
+  &:hover,
+  &:focus {
+    color: getColor('main-color');
+    cursor: pointer;
+    transition: color $transition;
+  }
+}

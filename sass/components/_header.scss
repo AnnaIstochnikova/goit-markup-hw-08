@@ -1,0 +1,85 @@
+header {
+  border-bottom: 1px solid #ececec;
+}
+
+.container__header {
+  align-items: center;
+  display: flex;
+  height: 80px;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 1170px;
+}
+
+.logo {
+  & > a {
+    font-family: 'Raleway';
+    font-size: getFont(logo);
+    line-height: 1.1;
+    text-decoration: none;
+    color: getColor(brand-color);
+  }
+  &__footer--second-word {
+    color: getColor('white');
+  }
+  &__header--second-word {
+    color: getColor('black');
+  }
+}
+
+.navbar {
+  align-items: center;
+  display: flex;
+  gap: 45px;
+  justify-content: space-between;
+  margin: auto 373px auto auto;
+  position: relative;
+}
+
+.navbar__link {
+  color: getColor(main-color);
+  font-weight: 500;
+  text-decoration: none;
+
+  &:hover,
+  &focus {
+    color: getColor(brand-color);
+    transition: color $transition;
+  }
+
+  &--active {
+    color: getColor(brand-color);
+  }
+  &--active::after {
+    background: getColor(brand-color);
+    border-radius: 2px;
+    content: '';
+    display: block;
+    height: 4px;
+    position: relative;
+    top: 30px;
+    width: 100%;
+  }
+}
+
+.contact {
+  text-decoration: none;
+  font-size: getFont(s);
+  color: getColor(secondary-color);
+
+  &:hover,
+  &:focus {
+    color: getColor(brand-color);
+    transition: color $transition;
+  }
+
+  &__icon {
+    fill: getColor(secondary-color);
+  }
+
+  &:hover .contact__icon,
+  &:focus .contact__icon {
+    fill: getColor(brand-color);
+    transition: fill $transition;
+  }
+}

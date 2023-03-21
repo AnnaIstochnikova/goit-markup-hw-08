@@ -1,0 +1,193 @@
+.modal {
+  background-color: getColor('white');
+  height: 581px;
+  left: 50%;
+  position: fixed;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  visibility: visible;
+  width: 528px;
+  z-index: 20;
+  border-radius: $border-radius-normal;
+  color: getColor(secondary-color);
+
+  & > p {
+    color: getColor('black');
+    font-weight: 700;
+    font-size: getFont(l);
+    text-align: center;
+    padding-top: 40px;
+    margin: 0;
+  }
+
+  &-icon {
+    height: 18px;
+    width: 18px;
+    display: inline-block;
+    margin: 13px;
+  }
+
+  &-close-icon {
+    display: flex;
+    fill: getColor('black');
+    justify-content: center;
+    margin: auto;
+  }
+
+  & > form > label {
+    display: flex;
+    justify-content: right;
+    flex-direction: column;
+    width: 448px;
+    margin: 0 auto;
+    font-size: getFont(xs);
+    margin-top: 12px;
+  }
+
+  & > form > span > :nth-child(7) {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  & > form > :nth-child(5) {
+    margin-top: 12px;
+  }
+  &__input-name {
+    margin-bottom: 4px;
+  }
+}
+
+.backdrop {
+  background-color: rgba(47, 48, 58, 0.2);
+  height: 100%;
+  left: 0;
+  opacity: 1;
+  position: fixed;
+  top: 0;
+  transition: opacity $transition, visibility $transition;
+  visibility: visible;
+  width: 100%;
+  z-index: 20;
+}
+
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.data-modal-close {
+  background-color: getColor('white');
+  border-radius: 50%;
+  border: 1px rgba(47, 48, 58, 0.2) solid;
+  height: 30px;
+  margin: 8px 8px 670px 490px;
+  padding: 0;
+  pointer-events: initial;
+  width: 30px;
+  position: absolute;
+  display: inline;
+
+  &:hover,
+  &:focus {
+    border-color: getColor(brand-color);
+    cursor: pointer;
+    transition: border-color $transition;
+  }
+}
+
+input[type='checkbox'] {
+  display: none;
+
+  & + label {
+    position: relative;
+    padding-left: 23px;
+  }
+
+  & + label::before {
+    content: '';
+    background: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='15' fill='none'%3E%3Cpath fill='%23212121' d='M14.222 1.667v11.666H1.778V1.667h12.444Zm0-1.667H1.778C.8 0 0 .75 0 1.667v11.666C0 14.25.8 15 1.778 15h12.444C15.2 15 16 14.25 16 13.333V1.667C16 .75 15.2 0 14.222 0Z'/%3E%3C/svg%3E")
+      no-repeat;
+    width: 16px;
+    height: 15px;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    display: block;
+    cursor: pointer;
+    transition: background-image $transition;
+  }
+  &:checked + label::before {
+    background: url("data:image/svg+xml;charset=utf8,%3Csvg width='16' height='15' viewBox='0 0 16 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='16' height='15' rx='2' fill='%232196F3'/%3E%3Cpath d='M3.95703 7.75166L3.88825 7.68604L3.81923 7.75141L2.93123 8.59258L2.85486 8.66492L2.93097 8.73753L6.42671 12.0724L6.49574 12.1382L6.56476 12.0724L14.069 4.91352L14.1449 4.84116L14.069 4.76881L13.1873 3.92764L13.1183 3.86183L13.0493 3.92761L6.49577 10.1735L3.95703 7.75166Z' fill='white' stroke='white' stroke-width='0.2'/%3E%3C/svg%3E")
+      no-repeat;
+  }
+}
+
+.window-comment > ::placeholder {
+  color: rgba(47, 48, 58, 0.5);
+}
+
+.input-box {
+  border: solid 1px rgba(12.9, 12.9, 12.9, 0.2);
+  height: 46.9px;
+  border-radius: $border-radius-normal;
+  width: 448px;
+  transition: color transition;
+  display: block;
+
+  &:focus-within {
+    border: getColor(brand-color) solid 1px;
+    fill: getColor(brand-color);
+  }
+
+  & > input {
+    border: 0;
+    outline: none;
+    width: 401.5px;
+    height: 44.9px;
+    border-radius: $border-radius-normal;
+    display: inline-block;
+    position: absolute;
+  }
+}
+
+textarea {
+  resize: none;
+  font-size: getFont(xs);
+  width: 448px;
+  margin: 4px auto;
+  height: 120px;
+  border: solid 1px rgba(12.9, 12.9, 12.9, 0.2);
+  border-radius: $border-radius-normal;
+  transition: color $transition;
+
+  &:focus-within {
+    border: solid 1px getColor(brand-color);
+    outline: none;
+  }
+}
+
+.window-comment {
+  padding-top: 10px;
+
+  & > textarea {
+    padding: 12px 16px;
+  }
+}
+
+.data-agreement-box {
+  margin: 20px auto 30px auto;
+  text-align: center;
+  display: block;
+  padding: 10 auto;
+
+  & > button {
+    display: block;
+    margin: 30px auto 40px;
+  }
+
+  & > label > a {
+    color: getColor(brand-color);
+  }
+}
