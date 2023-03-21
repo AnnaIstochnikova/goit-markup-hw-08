@@ -1,8 +1,17 @@
 body {
   font-family: 'Roboto', sans-serif;
   color: getColor(main-color);
-  width: 1600px;
+  width: 100vw;
+
+  @media screen and (min-width: $bp-tablet) and (max-width: $bp-laptop) {
+    width: 100vw;
+  }
+
+  @media screen and (min-width: $bp-laptop) {
+    width: 1600px;
+  }
 }
+
 svg {
   transform-origin: center;
 }
@@ -14,15 +23,28 @@ li {
   list-style: none;
 }
 .container {
-  margin: 94px auto;
-  width: 1170px;
+  width: 100vw;
+  margin-top: 60px;
+  @media screen and (min-width: $bp-laptop) {
+    margin: 94px;
+    width: 1170px;
+  }
 
   & > ul {
-    display: flex;
-    justify-content: space-between;
+    margin-left: 3vw;
+    margin-right: 3vw;
     padding-left: 0;
+
+    @media screen and (min-width: $bp-laptop) {
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+    }
   }
 }
+
 .button {
   background: getColor('brand-color');
   border-radius: $border-radius-normal;

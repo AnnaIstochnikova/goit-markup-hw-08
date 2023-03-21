@@ -8,7 +8,10 @@ header {
   height: 80px;
   justify-content: space-between;
   margin: 0 auto;
-  width: 1170px;
+
+  @media screen and (min-width: $bp-laptop) {
+    width: 1170px;
+  }
 }
 
 .logo {
@@ -34,6 +37,9 @@ header {
   justify-content: space-between;
   margin: auto 373px auto auto;
   position: relative;
+  @media screen and (min-width: $bp-tablet) and (max-width: $bp-laptop) {
+    margin: 0;
+  }
 }
 
 .navbar__link {

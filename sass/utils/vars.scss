@@ -24,9 +24,14 @@ $font-size: (
   's': 14px,
   'm': 18px,
   'l': 20px,
-  'container__title': 36px,
+  'container__title': 28px,
+  'container__title-desktop': 36px,
   'logo': 26px,
 );
 @function getFont($key) {
   @return map-get($font-size, $key);
 }
+
+$bp-mobile: 480px;
+$bp-tablet: 768px;
+$bp-laptop: 1200px;
