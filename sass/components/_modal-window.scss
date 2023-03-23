@@ -1,22 +1,32 @@
 .modal {
+  display: flex;
+  flex-direction: column;
   background-color: getColor('white');
-  height: 581px;
   left: 50%;
   position: fixed;
   top: 50%;
   transform: translate(-50%, -50%);
   visibility: visible;
-  width: 528px;
+  width: 450px;
   z-index: 20;
+  padding: 40px;
   border-radius: $border-radius-normal;
   color: getColor(secondary-color);
 
+  @media screen and (min-width: $bp-laptop) {
+    width: 528px;
+  }
+  & > button {
+    right: 10px;
+    margin-top: -30px;
+    position: absolute;
+  }
   & > p {
     color: getColor('black');
     font-weight: 700;
     font-size: getFont(l);
     text-align: center;
-    padding-top: 40px;
+    display: inline;
     margin: 0;
   }
 
@@ -33,12 +43,15 @@
     justify-content: center;
     margin: auto;
   }
-
+  &-close-icon:hover,
+  &-close-icon:focus {
+    fill: getColor(brand-color);
+  }
   & > form > label {
     display: flex;
     justify-content: right;
     flex-direction: column;
-    width: 448px;
+    width: 95%;
     margin: 0 auto;
     font-size: getFont(xs);
     margin-top: 12px;
@@ -82,19 +95,14 @@
   border-radius: 50%;
   border: 1px rgba(47, 48, 58, 0.2) solid;
   height: 30px;
-  margin: 8px 8px 670px 490px;
+  align-self: flex-end;
   padding: 0;
   pointer-events: initial;
   width: 30px;
   position: absolute;
   display: inline;
-
-  &:hover,
-  &:focus {
-    border-color: getColor(brand-color);
-    cursor: pointer;
-    transition: border-color $transition;
-  }
+  cursor: pointer;
+  transition: color $transition;
 }
 
 input[type='checkbox'] {
@@ -132,7 +140,6 @@ input[type='checkbox'] {
   border: solid 1px rgba(12.9, 12.9, 12.9, 0.2);
   height: 46.9px;
   border-radius: $border-radius-normal;
-  width: 448px;
   transition: color transition;
   display: block;
 
@@ -144,8 +151,8 @@ input[type='checkbox'] {
   & > input {
     border: 0;
     outline: none;
-    width: 401.5px;
-    height: 44.9px;
+    width: 65%;
+    height: 6.5%;
     border-radius: $border-radius-normal;
     display: inline-block;
     position: absolute;
@@ -155,8 +162,7 @@ input[type='checkbox'] {
 textarea {
   resize: none;
   font-size: getFont(xs);
-  width: 448px;
-  margin: 4px auto;
+  width: 100%;
   height: 120px;
   border: solid 1px rgba(12.9, 12.9, 12.9, 0.2);
   border-radius: $border-radius-normal;

@@ -14,16 +14,18 @@ h1 {
     padding-top: 200px;
   }
 }
-.list__wrap {
+/*.list__wrap {
   @media screen and (max-width: $bp-laptop) {
     flex-direction: row;
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
     margin-left: 0;
+  }
+  @media screen and (min-width: $bp-laptop) {
     justify-content: space-between;
   }
-}
+}*/
 .box__background-photo--big {
   margin: 0 auto;
   background-image: linear-gradient(to left, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
@@ -31,7 +33,7 @@ h1 {
   height: 400px;
   text-align: center;
   @media screen and (min-width: $bp-laptop) {
-    width: 1600px;
+    max-width: 1600px;
     height: 600px;
   }
 }
@@ -81,12 +83,10 @@ h1 {
 .list__icons--big {
   gap: 30px;
   padding-left: 0;
-  @media screen and (min-width: $bp-laptop) {
-    flex-basis: calc((1170px - 90px) / 4);
-  }
+
   & > li {
     @media screen and (min-width: $bp-tablet) and (max-width: $bp-laptop) {
-      width: 47%;
+      width: 47.9%;
       gap: 30px;
     }
   }
@@ -122,9 +122,12 @@ h1 {
 }
 .list__companies {
   & > li {
-    width: 45%;
+    width: 100%;
     @media screen and (min-width: $bp-tablet) and (max-width: $bp-laptop) {
-      width: 30%;
+      width: 30.5%;
+    }
+    @media screen and (min-width: $bp-laptop) {
+      width: 1170px;
     }
   }
 }
@@ -168,15 +171,17 @@ h1 {
   transition: background-color $transition, fill $transition;
 }
 .photo-card {
+  align-items: center;
   background-color: getColor('white');
   border-radius: $border-radius-normal;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 4px 4px 0px;
   text-align: center;
   margin: 0;
-  @media screen and (min-width: $bp-mobile) and (max-width: $bp-laptop) {
+  width: 100%;
+  @media screen and (min-width: $bp-tablet) and (max-width: $bp-laptop) {
     display: flex;
     flex-wrap: wrap;
-    width: 45vw;
+    width: 46vw;
   }
   @media screen and (min-width: $bp-laptop) {
     width: 270px;
@@ -206,6 +211,7 @@ h1 {
     display: flex;
     flex-direction: column;
     padding-bottom: 24px;
+    margin: 0 auto;
     @media screen and (min-width: $bp-laptop) {
       padding-bottom: 30px;
     }

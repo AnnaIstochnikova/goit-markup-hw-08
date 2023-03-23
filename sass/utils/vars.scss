@@ -26,7 +26,8 @@ $font-size: (
   'l': 20px,
   'container__title': 28px,
   'container__title--laptop': 36px,
-  'logo': 26px,
+  'logo-laptop': 26px,
+  'mobile-menu': 40px,
 );
 @function getFont($key) {
   @return map-get($font-size, $key);

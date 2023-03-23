@@ -8,7 +8,7 @@ header {
   height: 80px;
   justify-content: space-between;
   margin-left: 15px;
-  padding-right: 15px;
+  margin-top: 0;
 
   @media screen and (min-width: $bp-laptop) {
     margin: 0 auto;
@@ -19,10 +19,14 @@ header {
 .logo {
   & > a {
     font-family: 'Raleway';
-    font-size: getFont(logo);
+    font-size: getFont(container__title);
     line-height: 1.1;
     text-decoration: none;
     color: getColor(brand-color);
+
+    @media screen and (min-width: $bp-tablet) {
+      font-size: getFont(logo-laptop);
+    }
   }
   &__footer--second-word {
     color: getColor('white');
@@ -34,13 +38,14 @@ header {
 
 .navbar {
   align-items: center;
-  display: flex;
   gap: 45px;
   justify-content: space-between;
   margin: auto 373px auto auto;
   position: relative;
-  @media screen and (min-width: $bp-tablet) and (max-width: $bp-laptop) {
+  display: none;
+  @media screen and (min-width: $bp-tablet) {
     margin: 0;
+    display: flex;
   }
 }
 
@@ -92,11 +97,13 @@ header {
   }
 }
 .box__contact {
+  display: none;
   @media screen and (min-width: $bp-tablet) and (max-width: $bp-laptop) {
     display: flex;
     flex-direction: column;
   }
   @media screen and (min-width: $bp-laptop) {
+    display: flex;
     & > div {
       display: inline-block;
     }
