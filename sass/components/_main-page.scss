@@ -9,29 +9,29 @@ h1 {
   padding-top: 119px;
   text-align: center;
 
-  @media screen and (min-width: $bp-tablet) and (max-width: $bp-laptop) {
+  @media screen and (min-width: $bp-laptop) {
     font-size: 44px;
     padding-top: 200px;
   }
 }
 .list__wrap {
-  flex-direction: row;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  margin: 0;
-  justify-content: space-between;
-
-  @media screen and (min-width: $bp-laptop) {
-    flex-wrap: nowrap;
+  @media screen and (max-width: $bp-laptop) {
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-left: 0;
+    justify-content: space-between;
   }
 }
 .box__background-photo--big {
+  margin: 0 auto;
   background-image: linear-gradient(to left, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url('../images/10.jpg');
   height: 400px;
   text-align: center;
-  @media screen and (min-width: $bp-tablet) and (max-width: $bp-laptop) {
+  @media screen and (min-width: $bp-laptop) {
+    width: 1600px;
     height: 600px;
   }
 }
@@ -39,6 +39,7 @@ h1 {
 .background--light-gray {
   background: getColor(background-light-gray);
   padding-bottom: 30px;
+  width: 100%;
 }
 
 .title {
@@ -74,7 +75,7 @@ h1 {
 .container__desktop--visible {
   display: none;
   @media screen and (min-width: $bp-laptop) {
-    display: inline-block;
+    display: block;
   }
 }
 .list__icons--big {

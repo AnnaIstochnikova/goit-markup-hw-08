@@ -17,6 +17,7 @@ footer {
     flex-wrap: wrap;
   }
   @media screen and (min-width: $bp-laptop) {
+    width: 1170px;
     justify-content: space-between;
     flex-direction: row;
     align-items: baseline;

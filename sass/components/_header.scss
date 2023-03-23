@@ -7,10 +7,12 @@ header {
   display: flex;
   height: 80px;
   justify-content: space-between;
-  margin: 0 auto;
+  margin-left: 15px;
+  padding-right: 15px;
 
   @media screen and (min-width: $bp-laptop) {
-    width: 1170px;
+    margin: 0 auto;
+    padding-right: 0;
   }
 }
 
@@ -87,5 +89,16 @@ header {
   &:focus .contact__icon {
     fill: getColor(brand-color);
     transition: fill $transition;
+  }
+}
+.box__contact {
+  @media screen and (min-width: $bp-tablet) and (max-width: $bp-laptop) {
+    display: flex;
+    flex-direction: column;
+  }
+  @media screen and (min-width: $bp-laptop) {
+    & > div {
+      display: inline-block;
+    }
   }
 }

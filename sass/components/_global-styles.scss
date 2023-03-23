@@ -8,7 +8,8 @@ body {
   }
 
   @media screen and (min-width: $bp-laptop) {
-    width: 1600px;
+    width: 100%;
+    margin: 94px auto;
   }
 }
 
@@ -26,21 +27,20 @@ li {
   width: 100vw;
   margin-top: 60px;
   @media screen and (min-width: $bp-laptop) {
-    margin: 94px;
+    margin: 94px auto;
     width: 1170px;
   }
 
   & > ul {
-    margin-left: 3vw;
-    margin-right: 3vw;
     padding-left: 0;
-
+    @media screen and (max-width: $bp-laptop) {
+      margin-left: 3vw;
+      margin-right: 3vw;
+    }
     @media screen and (min-width: $bp-laptop) {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      width: 1170px;
-      margin: 94px;
     }
   }
 }

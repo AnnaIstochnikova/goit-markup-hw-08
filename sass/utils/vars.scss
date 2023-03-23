@@ -25,7 +25,7 @@ $font-size: (
   'm': 18px,
   'l': 20px,
   'container__title': 28px,
-  'container__title-desktop': 36px,
+  'container__title--laptop': 36px,
   'logo': 26px,
 );
 @function getFont($key) {
