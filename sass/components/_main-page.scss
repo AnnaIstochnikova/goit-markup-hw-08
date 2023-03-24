@@ -26,16 +26,20 @@ h1 {
     justify-content: space-between;
   }
 }
-/*.box__background-photo--big {
+.box__background-photo--big {
   margin: 0 auto;
-  background-color: linear-gradient(to left, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
-  height: 400px;
+  background-image: linear-gradient(to left, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+  background-size: cover;
+  background-position: center;
   text-align: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
   @media screen and (min-width: $bp-laptop) {
     max-width: 1600px;
     height: 600px;
   }
-}*/
+}
 
 .background--light-gray {
   background: getColor(background-light-gray);
@@ -135,7 +139,7 @@ h1 {
   border: 1px solid #afb1b8;
   fill: #afb1b8;
   width: 100%;
-
+  display: block;
   @media screen and (min-width: $bp-laptop) {
     height: 92px;
     width: 170px;
