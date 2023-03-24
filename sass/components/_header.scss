@@ -104,6 +104,7 @@ header {
   }
   @media screen and (min-width: $bp-laptop) {
     display: flex;
+    flex-direction: row;
     & > div {
       display: inline-block;
     }

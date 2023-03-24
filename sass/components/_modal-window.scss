@@ -7,9 +7,9 @@
   top: 50%;
   transform: translate(-50%, -50%);
   visibility: visible;
-  width: 450px;
+  min-width: 450px;
   z-index: 20;
-  padding: 40px;
+  padding: 40px 40px 0 40px;
   border-radius: $border-radius-normal;
   color: getColor(secondary-color);
 
