@@ -92,19 +92,7 @@
       </div>
     </header>
     <main>
-      <div>
-        
-        
-        <picture>
-          <div  class="box__background-photo--big">
-          </div>
-          <source srcset="images/Header-1600x800@2x.jpg 1600w, images/Header-800x400.jpg 800w" media="(min-width: 1201px)" sizes="1600px" >
-          <source srcset="images/Header-1600x800@2x.jpg 1600w, images/Header-800x400.jpg 800w" media="(min-width: 769px) and (max-width: 1200px)" sizes="100%"> 
-          <source srcset="images/Header-mobile-960x800@2x.jpg 960w, images/Header-mobile-480x400.jpg 480w" media="(max-width: 768px)" sizes="(100vw)">
-
-          <img src="images/Header-800x400.jpg" alt="People working in the office">
-        </picture>
-       
+      <div class="box__background-photo--big">
         <h1>EFEKTYWNE ROZWIĄZANIA<br />DLA WASZEGO BIZNESU</h1>
         <button data-modal-open class="button" type="button">Zamów usługę</button>
       </div>
@@ -160,8 +148,8 @@
             <div class="photo-sticker--gray">Aplikacje komputerowe</div>
             <img
               src="images/photo1.jpg"
-              height="294"
-              width="370"
+              srcset="images/photo1@2x.jpg 740w"
+              sizes="370px"
               alt="programer working his desk office"
             />
           </li>
@@ -170,8 +158,8 @@
             <div class="photo-sticker--gray">Aplikacje mobilne</div>
             <img
               src="images/photo2.jpg"
-              height="294"
-              width="370"
+              srcset="images/photo2@2x.jpg 740w"
+                sizes="370px" 
               alt=" web ui designers are developing application smartphones team creators is working interface mobile phones"
             />
           </li>
@@ -179,8 +167,8 @@
             <div class="photo-sticker--gray">Rozwiązania graficzne</div>
             <img
               src="images/photo3.jpg"
-              height="294"
-              width="370"
+              srcset="images/photo3@2x.jpg 740w"
+              sizes="370px"
               alt="creative artist web design with working colour selection graphic tablet"
             />
           </li>
@@ -192,7 +180,12 @@
           <ul class="list__wrap">
             <li>
               <figure class="photo-card">
-                <img src="images/part2photo1.jpg" alt="The man with glasses"  width="100%"/>
+                <img src="images/part2photo1.jpg"
+                srcset="images/part2photo1@2x.jpg 540w"
+                sizes="(min-width: 1200px) 270px, 
+                       (min-width: 768px) max-width:354px, 
+                       100%" 
+                alt="The man with glasses"/>
                 <figcaption>
                   <span><b>John Doe</b></span>
                   <span class="photo-card__description">Product Designer</span>
@@ -256,7 +249,11 @@
 
             <li>
               <figure class="photo-card">
-                <img src="images/part2photo2.jpg" alt="Blonde woman with glasses" width="100%" />
+                <img src="images/part2photo2.jpg" 
+                srcset="images/part2photo2@2x.jpg 540w"
+                sizes="(min-width: 1200px) 270px, 
+                       (min-width: 768px) max-width:354px, 
+                       100%" alt="Blonde woman with glasses" />
                 <figcaption>
                   <span><b>John Doe</b></span>
                   <span class="photo-card__description">Frontend Developer</span>
@@ -319,7 +316,11 @@
             </li>
             <li>
               <figure class="photo-card">
-                <img src="images/part2photo3.jpg" alt="The man in blue shirt" width="100%" />
+                <img src="images/part2photo3.jpg" 
+                srcset="images/part2photo3@2x.jpg 540w"
+                sizes="(min-width: 1200px) 270px, 
+                       (min-width: 768px) max-width:354px, 
+                       100%" alt="The man in blue shirt"/>
                 <figcaption>
                   <span><b>John Doe</b></span>
                   <span class="photo-card__description">Marketing</span>
@@ -384,8 +385,12 @@
               <figure class="photo-card">
                 <img
                   src="images/part2photo4.jpg"
+                  srcset="images/part2photo4@2x.jpg 540w"
+                sizes="(min-width: 1200px) 270px, 
+                       (min-width: 768px) max-width:354px, 
+                       100%" 
                   alt="The man with glasses in black t-shirt"
-                  width="100%"
+                
                 />
                 <figcaption>
                   <span><b>John Doe</b></span>

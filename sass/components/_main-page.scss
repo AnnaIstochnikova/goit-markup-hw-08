@@ -28,12 +28,37 @@ h1 {
 }
 .box__background-photo--big {
   margin: 0 auto;
-  background-image: linear-gradient(to left, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
-  background-position: center;
-  text-align: center;
+  background-image: linear-gradient(to left, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url('../../images/Header-mobile-480x400.jpg');
   width: 100%;
-  height: 100%;
-  position: absolute;
+  height: 400px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+
+  @media screen and (min-device-pixel-ratio: 2) and (max-width: $bp-tablet),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: linear-gradient(to left, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url('../../images/Header-mobile-960x800@2x.jpg');
+  }
+
+  @media screen and (min-width: $bp-tablet) {
+    background-image: linear-gradient(to left, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url('../../images/Header-800x400.jpg');
+  }
+
+  @media screen and (min-device-pixel-ratio: 2) and (min-width: $bp-tablet),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: linear-gradient(to left, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url('../../images/Header-1600x800@2x.jpg');
+  }
+
+  @media screen and (min-width: $bp-laptop) {
+    max-width: 1600px;
+    height: 600px;
+  }
 }
 
 .background--light-gray {
@@ -189,9 +214,6 @@ h1 {
     display: flex;
     justify-content: center;
     padding-top: 16px;
-    @media screen and (min-width: $bp-laptop) {
-      width: 206px;
-    }
   }
   &__description {
     color: getColor(secondary-color);
