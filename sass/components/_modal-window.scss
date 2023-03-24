@@ -7,12 +7,15 @@
   top: 50%;
   transform: translate(-50%, -50%);
   visibility: visible;
-  min-width: 450px;
+  width: 95vw;
   z-index: 20;
   padding: 40px 40px 0 40px;
   border-radius: $border-radius-normal;
   color: getColor(secondary-color);
 
+  @media screen and (min-width: $bp-tablet) {
+    width: 450px;
+  }
   @media screen and (min-width: $bp-laptop) {
     width: 528px;
   }
@@ -151,7 +154,7 @@ input[type='checkbox'] {
   & > input {
     border: 0;
     outline: none;
-    width: 65%;
+    width: 60%;
     height: 6.5%;
     border-radius: $border-radius-normal;
     display: inline-block;
