@@ -140,18 +140,15 @@ h1 {
   line-height: 1.7;
   margin: 0;
 }
-.list__companies {
-  & > li > a > svg {
-    @media screen and (min-width: $bp-tablet) {
-      width: calc((100% - 10%) / 3);
-      gap: 30px;
-    }
-  }
-}
+
 .icon-company {
   border-radius: $border-radius-normal;
   border: 1px solid #afb1b8;
   fill: #afb1b8;
+  width: 92vw;
+  @media screen and (min-width: $bp-tablet) {
+    width: calc((100vw - 12vw) / 3);
+  }
   @media screen and (min-width: $bp-laptop) {
     height: 92px;
     width: 170px;
