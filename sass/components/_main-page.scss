@@ -147,7 +147,7 @@ h1 {
   fill: #afb1b8;
   width: 92vw;
   @media screen and (min-width: $bp-tablet) {
-    width: calc((100vw - 12vw) / 3);
+    width: calc((100vw - 11.5vw) / 3);
   }
   @media screen and (min-width: $bp-laptop) {
     height: 92px;
