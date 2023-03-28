@@ -11,7 +11,7 @@ footer {
   & > div {
     padding-top: 60px;
   }
-  @media screen and (min-width: $bp-tablet) and (max-width: $bp-laptop) {
+  @media screen and (min-width: $bp-tablet) {
     justify-content: space-evenly;
     flex-direction: row;
     flex-wrap: wrap;
@@ -60,10 +60,6 @@ footer {
 .form {
   display: flex;
   flex-direction: column;
-  @media screen and (max-width: $bp-laptop) {
-    width: 60%;
-    align-items: center;
-  }
 }
 
 .icon-footer-newsletter {
@@ -88,7 +84,7 @@ footer {
   padding: 15px;
   margin-bottom: 20px;
   display: block;
-  @media screen and (min-width: $bp-tablet) and (max-width: $bp-laptop) {
+  @media screen and (min-width: $bp-tablet) {
     width: 450px;
   }
   @media screen and (min-width: $bp-laptop) {

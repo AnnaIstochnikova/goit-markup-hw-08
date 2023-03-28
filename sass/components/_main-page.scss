@@ -121,10 +121,13 @@ h1 {
   padding-left: 0;
   margin: 0;
 
+  @media screen and (min-width: $bp-tablet) {
+    justify-content: space-between;
+  }
+
   & > li {
     @media screen and (min-width: $bp-tablet) and (max-width: $bp-laptop) {
-      width: 47.9%;
-      gap: 30px;
+      width: 354px;
     }
   }
 
@@ -158,13 +161,17 @@ h1 {
   margin: 0;
 }
 
+.list__companies {
+  justify-content: space-between;
+}
+
 .icon-company {
   border-radius: $border-radius-normal;
   border: 1px solid #afb1b8;
   fill: #afb1b8;
   width: 92vw;
   @media screen and (min-width: $bp-tablet) {
-    width: calc((100vw - 11.5vw) / 3);
+    width: 226px;
   }
   @media screen and (min-width: $bp-laptop) {
     height: 92px;
@@ -207,7 +214,7 @@ h1 {
   text-align: center;
   margin: 0;
   width: 100%;
-  @media screen and (min-width: $bp-tablet) and (max-width: $bp-laptop) {
+  @media screen and (min-width: $bp-tablet) {
     display: flex;
     flex-wrap: wrap;
     width: 46vw;

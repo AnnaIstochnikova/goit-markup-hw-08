@@ -23,9 +23,12 @@ li {
   margin-top: 60px;
   padding-left: 15px;
   padding-right: 15px;
+
   @media screen and (min-width: $bp-laptop) {
     margin: 94px auto;
     width: 1170px;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   & > ul {
@@ -33,7 +36,6 @@ li {
     @media screen and (min-width: $bp-laptop) {
       display: flex;
       flex-direction: row;
-      /*justify-content: space-evenly;*/
     }
     @media screen and (min-width: $bp-laptop) {
       justify-content: space-between;
